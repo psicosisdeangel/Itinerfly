@@ -1,4 +1,3 @@
-const { describe, it, expect } = require('vitest')
 const { AIRLINES, ROUTES, DEPARTURES, ARRIVALS } = require('../mock/flightData')
 
 describe('AIRLINES mock', () => {
@@ -41,7 +40,7 @@ describe('ROUTES mock', () => {
   it('durationMin es positiva', () => {
     ROUTES.forEach(r => expect(r.durationMin).toBeGreaterThan(0))
   })
-  it('coordenadas válidas de origen', () => {
+  it('coordenadas válidas', () => {
     ROUTES.forEach(r => {
       expect(r.from.lat).toBeGreaterThan(-90)
       expect(r.from.lat).toBeLessThan(90)
@@ -67,8 +66,8 @@ describe('DEPARTURES mock', () => {
     })
   })
   it('estados son válidos IATA AIDM', () => {
-    const validos = ['ON_TIME','DELAYED','BOARDING','LAST_CALL','CLOSED','IN_FLIGHT','LANDED','CANCELLED']
-    DEPARTURES.forEach(f => expect(validos).toContain(f.status))
+    const v = ['ON_TIME','DELAYED','BOARDING','LAST_CALL','CLOSED','IN_FLIGHT','LANDED','CANCELLED']
+    DEPARTURES.forEach(f => expect(v).toContain(f.status))
   })
   it('vuelos DELAYED tienen delayMinutes > 0', () => {
     DEPARTURES.filter(f => f.status === 'DELAYED')
@@ -90,7 +89,7 @@ describe('ARRIVALS mock', () => {
     ARRIVALS.forEach(f => expect(f).toHaveProperty('scheduledOut'))
   })
   it('estados son válidos', () => {
-    const validos = ['ON_TIME','DELAYED','BOARDING','LAST_CALL','CLOSED','IN_FLIGHT','LANDED','CANCELLED']
-    ARRIVALS.forEach(f => expect(validos).toContain(f.status))
+    const v = ['ON_TIME','DELAYED','BOARDING','LAST_CALL','CLOSED','IN_FLIGHT','LANDED','CANCELLED']
+    ARRIVALS.forEach(f => expect(v).toContain(f.status))
   })
 })

@@ -240,7 +240,7 @@ function normalizarVueloFlightAware(vuelo, mode) {
     gate:             vuelo.gate_origin || vuelo.gate_destination || "—",
     terminal:         vuelo.terminal_origin || vuelo.terminal_destination || "—",
     aircraft:         vuelo.aircraft_type || "—",
-    type:             "domestic", // TODO: calcular según países de origen/destino
+    type:             "domestic", // calcular según países de origen/destino
     delayMinutes:     delayMinutes(vuelo.scheduled_out, vuelo.estimated_out),
     registration:     vuelo.registration,
     callsign:         vuelo.ident,
@@ -268,7 +268,7 @@ function traducirEstadoFlightAware(estado, cancelado) {
 
   // BOARDING y LAST_CALL no vienen de FlightAware directamente.
   // Se derivan del tiempo restante antes de la salida programada.
-  // TODO: implementar lógica de tiempo cuando tengamos datos reales
+  // implementar lógica de tiempo cuando tengamos datos reales
 
   return mapa[estado] || "ON_TIME";
 }

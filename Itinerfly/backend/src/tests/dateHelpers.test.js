@@ -1,4 +1,4 @@
-const { describe, it, expect } = require('vitest')
+// globals: describe, it, expect vienen de vitest automáticamente
 const { addDays, toDateString, getNextDays, delayMinutes } = require('../utils/dateHelpers')
 
 describe('addDays', () => {

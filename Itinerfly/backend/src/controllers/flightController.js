@@ -67,7 +67,7 @@ async function searchByLocation(req, res) {
 
 async function getFlightDetail(req, res) {
   try {
-    const codigo = req.params.flightCode.replace(/[^a-zA-Z0-9]/g, "").toUpperCase();
+    const codigo = req.params.flightCode.replaceAll(/[^a-zA-Z0-9]/g, "").toUpperCase();
     if (codigo.length < 3 || codigo.length > 8) {
       return clientError(res, "Código de vuelo inválido.", 400);
     }

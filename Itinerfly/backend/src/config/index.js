@@ -14,7 +14,7 @@ require("dotenv").config(); // Carga el archivo .env
 const config = {
 
   // ── Servidor ─────────────────────────────────────────
-  port: parseInt(process.env.PORT) || 4000,
+  port: Number.parseInt(process.env.PORT) || 4000,
   nodeEnv: process.env.NODE_ENV || "development",
 
   // Atajo para saber si estamos en desarrollo
@@ -48,8 +48,8 @@ const config = {
 
   // ── Rate limiting ─────────────────────────────────────
   rateLimit: {
-    windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS) || 900000,
-    max:      parseInt(process.env.RATE_LIMIT_MAX)       || 100,
+    windowMs: Number.parseInt(process.env.RATE_LIMIT_WINDOW_MS) || 900000,
+    max:      Number.parseInt(process.env.RATE_LIMIT_MAX)       || 100,
   },
 };
 

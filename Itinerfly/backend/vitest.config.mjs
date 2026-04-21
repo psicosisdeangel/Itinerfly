@@ -4,14 +4,8 @@ export default defineConfig({
   test: {
     environment: 'node',
     globals: true,
-    // Vitest necesita saber que estos archivos son CommonJS
-    pool: 'forks',
-    poolOptions: {
-      forks: {
-        singleFork: true
-      }
-    },
     include: ['src/tests/**/*.test.js'],
+    pool: 'forks',
     coverage: {
       provider: 'v8',
       reporter: ['text', 'lcov', 'html'],
