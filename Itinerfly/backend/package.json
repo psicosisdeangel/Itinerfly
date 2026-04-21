@@ -1,13 +1,14 @@
 {
   "name": "jfk-itinerary-backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "Backend API para el sistema de itinerario JFK",
   "main": "server.js",
   "scripts": {
     "start":         "node server.js",
     "dev":           "npx nodemon server.js",
-    "test":          "jest --forceExit",
-    "test:coverage": "jest --coverage --forceExit"
+    "test":          "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "axios": "^1.7.2",
@@ -21,26 +22,8 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "jest": "^29.7.0",
-    "nodemon": "^3.1.4",
-    "supertest": "^7.0.0"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "testMatch": ["**/tests/**/*.test.js"],
-    "collectCoverageFrom": [
-      "src/**/*.js",
-      "!src/mock/**"
-    ],
-    "coverageReporters": ["text", "lcov", "html"],
-    "coverageDirectory": "coverage",
-    "coverageThreshold": {
-      "global": {
-        "lines":      30,
-        "functions":  30,
-        "branches":   30,
-        "statements": 30
-      }
-    }
+    "@vitest/coverage-v8": "^1.6.0",
+    "supertest": "^7.0.0",
+    "vitest": "^1.6.0"
   }
 }
