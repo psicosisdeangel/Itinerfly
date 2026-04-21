@@ -1,8 +1,7 @@
 // ============================================================
 // Pages/HomePage.jsx
-//
-// Página principal del itinerario.
-// Ahora los datos vienen del backend en lugar del mock local.
+// Los datos vienen del backend via useFlights hook.
+// Los filtros se pasan directamente al hook que llama al backend.
 // ============================================================
 
 import React, { useState } from "react";
@@ -25,25 +24,31 @@ export default function HomePage() {
   const [mode,     setMode]     = useState("departures");
   const [selected, setSelected] = useState(null);
   const [filtros,  setFiltros]  = useState({
-    date:    new Date().toISOString().split("T")[0],
-    type:    "all",
-    airline: "all",
-    search:  "",
+    date:           new Date().toISOString().split("T")[0],
+    type:           "all",
+    airline:        "all",
+    search:         "",
+    locationSearch: "",
   });
 
-  // Hook que se comunica con el backend
-  // Se recarga automáticamente cuando cambian mode o filtros
-  const { flights, loading, error, recargar } = useFlights(mode, filtros);
+  // Hook conectado al backend — se recarga automáticamente
+  // cada vez que cambian mode o filtros
+  const { flights, loading, error, recargar } = useFlights(mode, {
+    date:   filtros.date,
+    type:   filtros.type,
+    airline: filtros.airline,
+    search: filtros.search || filtros.locationSearch,
+  });
 
   return (
     <div className="page">
       <h1 className="page__title">Itinerario de Vuelos — JFK</h1>
       <p className="page__subtitle">Haz clic en un vuelo para ver los detalles completos.</p>
 
-      {/* Tabs Salidas / Llegadas */}
+      {/* Salidas / Llegadas */}
       <div className="mode-bar">
         <div className="mode-toggle">
-          {[["departures","Salidas"],["arrivals","Llegadas"]].map(([id,icon,label]) => (
+          {[["departures","🛫","Salidas"],["arrivals","🛬","Llegadas"]].map(([id,icon,label]) => (
             <button
               key={id}
               onClick={() => setMode(id)}
@@ -54,17 +59,13 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* Botón de recarga manual */}
         <button
           onClick={recargar}
           disabled={loading}
           style={{
-            padding: "6px 14px",
-            borderRadius: "6px",
-            border: "1px solid #e3e8ff",
-            background: "#fff",
-            fontSize: "12px",
-            color: "#1a237e",
+            padding: "6px 14px", borderRadius: "6px",
+            border: "1px solid #e3e8ff", background: "#fff",
+            fontSize: "12px", color: "#1a237e",
             cursor: loading ? "not-allowed" : "pointer",
             opacity: loading ? 0.6 : 1,
           }}
@@ -81,35 +82,33 @@ export default function HomePage() {
       {/* Error de conexión */}
       {error && (
         <div style={{
-          padding: "12px 16px",
-          background: "#ffebee",
-          border: "1px solid #ef9a9a",
-          borderRadius: "8px",
-          marginBottom: "16px",
-          fontSize: "13px",
-          color: "#b71c1c",
-          display: "flex",
-          alignItems: "center",
-          gap: "8px",
+          padding: "12px 16px", background: "#ffebee",
+          border: "1px solid #ef9a9a", borderRadius: "8px",
+          marginBottom: "16px", fontSize: "13px", color: "#b71c1c",
+          display: "flex", alignItems: "center", gap: "8px",
         }}>
           <span>⚠️</span>
           <span>{error}</span>
           <button
             onClick={recargar}
-            style={{ marginLeft: "auto", padding: "4px 10px", borderRadius: "4px", border: "1px solid #ef9a9a", background: "transparent", color: "#b71c1c", cursor: "pointer", fontSize: "12px" }}
+            style={{
+              marginLeft: "auto", padding: "4px 10px",
+              borderRadius: "4px", border: "1px solid #ef9a9a",
+              background: "transparent", color: "#b71c1c",
+              cursor: "pointer", fontSize: "12px",
+            }}
           >
             Reintentar
           </button>
         </div>
       )}
 
-      {/* Tabla de vuelos */}
+      {/* Tabla */}
       <div className="table-card">
         {loading ? (
-          // Estado de carga
           <div style={{ padding: "48px", textAlign: "center", color: "#90a4ae" }}>
             <div style={{ fontSize: "32px", marginBottom: "12px" }}>✈</div>
-            <div style={{ fontSize: "14px" }}>Consultando vuelos...</div>
+            <div style={{ fontSize: "14px" }}>Consultando vuelos desde el backend...</div>
           </div>
         ) : (
           <FlightTable
@@ -122,7 +121,7 @@ export default function HomePage() {
         )}
       </div>
 
-      {/* Leyenda de estados IATA */}
+      {/* Leyenda IATA */}
       <div className="legend-card">
         <div className="legend-title">ESTADOS IATA AIDM</div>
         <div className="legend-row">
@@ -132,7 +131,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Panel de detalle */}
       {selected && (
         <FlightDetail flight={selected} onClose={() => setSelected(null)} />
       )}

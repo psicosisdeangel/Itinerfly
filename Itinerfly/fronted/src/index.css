@@ -576,10 +576,12 @@ body {
 }
 .airline-card__sep { height: 1px; background: #f0f2fb; }
 .airline-card__info { display: flex; flex-direction: column; gap: 7px; }
-.info-row { display: flex; align-items: center; gap: 8px; }
+
 .info-row__icon { font-size: 12px; width: 16px; text-align: center; }
-.info-row__label { font-size: 11px; color: #90a4ae; min-width: 100px; }
-.info-row__value { font-size: 12px; font-weight: 500; color: #455a64; }
+.info-row {display: flex; justify-content: space-between; align-items: center;width: 100%;margin-bottom: 8px; }
+.info-row__label {flex-shrink: 0; margin-right: 10px;}
+.info-row__value {text-align: right;word-break: break-all; /* Si el número es gigante, lo rompe para que no se salga */color: #555; /* O el color que prefieras */
+}
 .info-row__value.mono { font-family: 'DM Mono', monospace; }
 
 /* ── Route Card ──────────────────────────────────────────── */

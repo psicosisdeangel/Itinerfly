@@ -12,7 +12,7 @@ export default function AirlineCard({ airline }) {
       </div>
       <div className="airline-card__sep" />
       <div className="airline-card__info">
-        {[["Asistencia",airline.phone,true],["🛫","Terminal salida",airline.terminalDep,false],["🛫","Terminal llegada",airline.terminalArr,false]].map(([icon,label,value,mono])=>(
+        {[["Asistencia", airline.phone,true],["🛫","Terminal salida",airline.terminalDep,false],["🛫","Terminal llegada",airline.terminalArr,false]].map(([icon,label,value,mono])=>(
           <div key={label} className="info-row">
             <span className="info-row__icon">{icon}</span>
             <span className="info-row__label">{label}</span>

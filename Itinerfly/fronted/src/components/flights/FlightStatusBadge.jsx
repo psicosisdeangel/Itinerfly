@@ -11,7 +11,7 @@ const STATUS_LABELS = {
   CANCELLED: "Cancelado",
 };
 
-export default function FlightStatusBadge({ status, size = "md" }) {
+export default function FlightStatusBadge({status, size = "md" }) {
   return (
     <span className={`status-badge status-${status}${size === "lg" ? " lg" : ""}`}>
       {STATUS_LABELS[status] || status}

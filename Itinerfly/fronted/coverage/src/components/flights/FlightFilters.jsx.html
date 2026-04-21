@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/36</span>
+                <span class='fraction'>0/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/36</span>
+                <span class='fraction'>0/11</span>
             </div>
         
             
@@ -99,78 +99,78 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import React from "react";</span></span></span>
-<span class="cstat-no" title="statement not covered" >import { AIRLINES } from "../../data/mockData";</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export default function FlightFilters({ filters, onChange }) {</span>
-<span class="cstat-no" title="statement not covered" >  const today = new Date();</span>
-<span class="cstat-no" title="statement not covered" >  const dates = [0,1,2].map((n) =&gt; { const d=new Date(today); d.setDate(today.getDate()+n); return d; });</span>
-<span class="cstat-no" title="statement not covered" >  const fmtLabel = (d) =&gt; d.toDateString()===today.toDateString() ? "Hoy" : d.toLocaleDateString("es-ES",{weekday:"short",day:"numeric",month:"short"});</span>
-<span class="cstat-no" title="statement not covered" >  const fmtVal   = (d) =&gt; d.toISOString().split("T")[0];</span>
-<span class="cstat-no" title="statement not covered" ></span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
+import { AIRLINES } from "../../data/mockData";
+&nbsp;
+export default function <span class="fstat-no" title="function not covered" >FlightFilters({</span> filters, onChange }) {
+  const today = <span class="cstat-no" title="statement not covered" >new Date();</span>
+  const dates = <span class="cstat-no" title="statement not covered" >[0,1,2].<span class="fstat-no" title="function not covered" >map((n</span>) =&gt; { const d=<span class="cstat-no" title="statement not covered" >new Date(today);</span> <span class="cstat-no" title="statement not covered" >d.setDate(today.getDate()+n); <span class="cstat-no" title="statement not covered" >r</span>eturn d; });</span></span>
+  const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fmtLabel = (d</span>) =&gt; <span class="cstat-no" title="statement not covered" >d.toDateString()===today.toDateString() ? "Hoy" : d.toLocaleDateString("es-ES",{weekday:"short",day:"numeric",month:"short"});</span></span>
+  const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fmtVal   = (d</span>) =&gt; <span class="cstat-no" title="statement not covered" >d.toISOString().split("T")[0];</span></span>
+&nbsp;
 <span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;div className="filters-row"&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="filter-group"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        {dates.map((d) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >          const val=fmtVal(d), active=filters.date===val;</span>
-<span class="cstat-no" title="statement not covered" >          return &lt;button key={val} onClick={()=&gt;onChange({...filters,date:val})} className={`date-btn${active?" active":""}`}&gt;{fmtLabel(d)}&lt;/button&gt;;</span>
-<span class="cstat-no" title="statement not covered" >        })}</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="filter-sep" /&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="filter-group"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        {[["all","Todos"],["domestic","Nacionales"],["international","Internacionales"]].map(([type,label]) =&gt; (</span>
-<span class="cstat-no" title="statement not covered" >          &lt;button key={type} onClick={()=&gt;onChange({...filters,type})} className={`type-btn${filters.type===type?" active":""}`}&gt;{label}&lt;/button&gt;</span>
-<span class="cstat-no" title="statement not covered" >        ))}</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="filter-sep" /&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;select className="airline-select" value={filters.airline} onChange={(e)=&gt;onChange({...filters,airline:e.target.value})}&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;option value="all"&gt;Todas las aerolíneas&lt;/option&gt;</span>
-<span class="cstat-no" title="statement not covered" >        {AIRLINES.map((a)=&gt;&lt;option key={a.id} value={a.id}&gt;{a.name}&lt;/option&gt;)}</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/select&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="location-search-wrap"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;span className="location-search-icon"&gt;📍&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;input className="location-search-input" type="text" placeholder="Ciudad, país o aeropuerto destino..."</span>
-<span class="cstat-no" title="statement not covered" >          value={filters.locationSearch} onChange={(e)=&gt;onChange({...filters,locationSearch:e.target.value})} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >  );</span>
-<span class="cstat-no" title="statement not covered" >}</span>
+    &lt;div className="filters-row"&gt;
+      &lt;div className="filter-group"&gt;
+        {dates.<span class="fstat-no" title="function not covered" >map((d</span>) =&gt; {
+          const val=<span class="cstat-no" title="statement not covered" >fmtVal(d),</span> active=<span class="cstat-no" title="statement not covered" >filters.date===val;</span>
+<span class="cstat-no" title="statement not covered" >          return &lt;button key={val} <span class="fstat-no" title="function not covered" >onClick={()=&gt;<span class="cstat-no" title="statement not covered" >o</span>nChange({...filters,date:val})}</span> className={`date-btn${active?" active":""}`}&gt;{fmtLabel(d)}&lt;/button&gt;;</span>
+        })}
+      &lt;/div&gt;
+      &lt;div className="filter-sep" /&gt;
+      &lt;div className="filter-group"&gt;
+        {[["all","Todos"],["domestic","Nacionales"],["international","Internacionales"]].<span class="fstat-no" title="function not covered" >map(([</span>type,label]) =&gt; (
+<span class="cstat-no" title="statement not covered" >          &lt;button key={type} <span class="fstat-no" title="function not covered" >onClick={()=&gt;<span class="cstat-no" title="statement not covered" >o</span>nChange({...filters,type})}</span> className={`type-btn${filters.type===type?" active":""}`}&gt;{label}&lt;/button&gt;</span>
+        ))}
+      &lt;/div&gt;
+      &lt;div className="filter-sep" /&gt;
+      &lt;select className="airline-select" value={filters.airline} <span class="fstat-no" title="function not covered" >onChange={(e</span>)=&gt;<span class="cstat-no" title="statement not covered" >onChange({...filters,airline:e.target.value})}</span>&gt;
+        &lt;option value="all"&gt;Todas las aerolíneas&lt;/option&gt;
+        {AIRLINES.<span class="fstat-no" title="function not covered" >map((a</span>)=&gt;<span class="cstat-no" title="statement not covered" >&lt;option key={a.id} value={a.id}&gt;{a.name}&lt;/option&gt;)}</span>
+      &lt;/select&gt;
+      &lt;div className="location-search-wrap"&gt;
+        &lt;span className="location-search-icon"&gt;📍&lt;/span&gt;
+        &lt;input className="location-search-input" type="text" placeholder="Ciudad, país o aeropuerto destino..."
+          value={filters.locationSearch} <span class="fstat-no" title="function not covered" >onChange={(e</span>)=&gt;<span class="cstat-no" title="statement not covered" >onChange({...filters,locationSearch:e.target.value})} /&gt;</span>
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -178,7 +178,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-04-17T01:29:15.802Z
+                at 2026-04-21T01:59:31.095Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

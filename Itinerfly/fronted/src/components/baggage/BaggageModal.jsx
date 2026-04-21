@@ -13,7 +13,7 @@ export default function BaggageModal({ onClose }) {
           <button className="baggage-close-btn" onClick={onClose}>×</button>
         </div>
         <div className="baggage-body">
-          <div className="baggage-notice">Información basada en estándares OACI. Las políticas específicas pueden variar por aerolínea.</div>
+          <div className="baggage-notice">Información basada en estándares OACI.</div>
           {BAGGAGE_REGULATIONS.map((cat)=>(
             <div key={cat.category} className="baggage-cat">
               <div className="baggage-cat__header"><span>{cat.icon}</span>{cat.category}</div>

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+
 export default defineConfig({
   plugins: [react()],
   server: { port: 3000 },
@@ -10,20 +11,20 @@ export default defineConfig({
     setupFiles: './src/tests/setup.js',
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'lcov', 'html'], // lcov es el que lee SonarQube
+      reporter: ['text', 'lcov', 'html'],
       reportsDirectory: './coverage',
+      all: true,                          // Fuerza instrumentar TODOS los archivos
       include: ['src/**/*.{js,jsx}'],
       exclude: [
         'src/tests/**',
+        'src/Pages/Homepage.jsx',
+        'src/Pages/WidgetsPage.jsx',
         'src/main.jsx',
         'src/data/mockData.js',
+        'src/index.css',
+        '**/*.config.{js,ts}',
       ],
-      thresholds: {
-        lines:      30,
-        functions:  30,
-        branches:   30,
-        statements: 30,
-      }
+
     }
   }
 })

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/47</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/47</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -110,100 +110,100 @@
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
 <a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import React from "react";</span></span></span>
-<span class="cstat-no" title="statement not covered" >import { AIRLINES } from "../../data/mockData";</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >function RouteMapSVG({ from, to }) {</span>
-<span class="cstat-no" title="statement not covered" >  const toXY=(lat,lng)=&gt;({x:((lng+180)/360)*280, y:((90-lat)/180)*140});</span>
-<span class="cstat-no" title="statement not covered" >  const p1=toXY(from.lat,from.lng), p2=toXY(to.lat,to.lng);</span>
-<span class="cstat-no" title="statement not covered" >  const mx=(p1.x+p2.x)/2, my=Math.min(p1.y,p2.y)-22;</span>
-<span class="cstat-no" title="statement not covered" >  const t=0.5;</span>
-<span class="cstat-no" title="statement not covered" >  const ax=(1-t)*(1-t)*p1.x+2*(1-t)*t*mx+t*t*p2.x;</span>
-<span class="cstat-no" title="statement not covered" >  const ay=(1-t)*(1-t)*p1.y+2*(1-t)*t*my+t*t*p2.y;</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;svg viewBox="0 0 280 140" style={{width:"100%",height:"130px",display:"block",borderRadius:"8px"}}&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;rect width="280" height="140" fill="#dde4f0" rx="8"/&gt;</span>
-<span class="cstat-no" title="statement not covered" >      {[40,80,120,160,200,240].map(x=&gt;&lt;line key={x} x1={x} y1="0" x2={x} y2="140" stroke="#c8d0e4" strokeWidth="0.5"/&gt;)}</span>
-<span class="cstat-no" title="statement not covered" >      {[40,80,120].map(y=&gt;&lt;line key={y} x1="0" y1={y} x2="280" y2={y} stroke="#c8d0e4" strokeWidth="0.5"/&gt;)}</span>
-<span class="cstat-no" title="statement not covered" >      &lt;path d={`M ${p1.x} ${p1.y} Q ${mx} ${my} ${p2.x} ${p2.y}`} fill="none" stroke="#1a237e" strokeWidth="1.5" strokeDasharray="5 3"/&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;text x={ax} y={ay-4} textAnchor="middle" fontSize="10"&gt;✈&lt;/text&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;circle cx={p1.x} cy={p1.y} r="5" fill="#1a237e"/&gt;&lt;circle cx={p1.x} cy={p1.y} r="2.5" fill="#fff"/&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;text x={p1.x} y={p1.y+12} textAnchor="middle" fontSize="7" fontWeight="bold" fill="#1a237e"&gt;{from.iata}&lt;/text&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;circle cx={p2.x} cy={p2.y} r="5" fill="#c62828"/&gt;&lt;circle cx={p2.x} cy={p2.y} r="2.5" fill="#fff"/&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;text x={p2.x} y={p2.y+12} textAnchor="middle" fontSize="7" fontWeight="bold" fill="#c62828"&gt;{to.iata}&lt;/text&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;rect x={Math.min(Math.max(p2.x-28,2),220)} y={p2.y+15} width="56" height="13" rx="3" fill="#c62828" opacity="0.85"/&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;text x={Math.min(Math.max(p2.x,30),248)} y={p2.y+24} textAnchor="middle" fontSize="7" fill="#fff" fontWeight="bold"&gt;{to.city}&lt;/text&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/svg&gt;</span>
-<span class="cstat-no" title="statement not covered" >  );</span>
-<span class="cstat-no" title="statement not covered" >}</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export default function RouteCard({ route }) {</span>
-<span class="cstat-no" title="statement not covered" >  const airline=AIRLINES.find((a)=&gt;a.id===route.airline);</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;div className="route-card"&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="route-card__map"&gt;&lt;RouteMapSVG from={route.from} to={route.to}/&gt;&lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="route-card__info"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;div className="route-card__name"&gt;{route.to.name.length&gt;32?route.to.name.slice(0,32)+"…":route.to.name}&lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;div className="route-card__city"&gt;{route.to.city}&lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;div className="route-card__pills"&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;span className="pill"&gt;{route.from.iata}&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;span className="pill-arrow"&gt;→&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;span className="pill red"&gt;{route.to.iata}&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;span className="pill"&gt;{route.distance}&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;span className="pill"&gt;{route.duration}&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        {airline &amp;&amp; &lt;div className="route-card__airline"&gt;{airline.name}&lt;/div&gt;}</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >  );</span>
-<span class="cstat-no" title="statement not covered" >}</span>
+<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
+import { AIRLINES } from "../../data/mockData";
+&nbsp;
+function RouteMapSVG({ from, to }) {
+  const toXY=(lat,lng)=&gt;({x:((lng+180)/360)*280, y:((90-lat)/180)*140});
+  const p1=toXY(from.lat,from.lng), p2=toXY(to.lat,to.lng);
+  const mx=(p1.x+p2.x)/2, my=Math.min(p1.y,p2.y)-22;
+  const t=0.5;
+  const ax=(1-t)*(1-t)*p1.x+2*(1-t)*t*mx+t*t*p2.x;
+  const ay=(1-t)*(1-t)*p1.y+2*(1-t)*t*my+t*t*p2.y;
+  return (
+    &lt;svg viewBox="0 0 280 140" style={{width:"100%",height:"130px",display:"block",borderRadius:"8px"}}&gt;
+      &lt;rect width="280" height="140" fill="#dde4f0" rx="8"/&gt;
+      {[40,80,120,160,200,240].map(x=&gt;&lt;line key={x} x1={x} y1="0" x2={x} y2="140" stroke="#c8d0e4" strokeWidth="0.5"/&gt;)}
+      {[40,80,120].map(y=&gt;&lt;line key={y} x1="0" y1={y} x2="280" y2={y} stroke="#c8d0e4" strokeWidth="0.5"/&gt;)}
+      &lt;path d={`M ${p1.x} ${p1.y} Q ${mx} ${my} ${p2.x} ${p2.y}`} fill="none" stroke="#1a237e" strokeWidth="1.5" strokeDasharray="5 3"/&gt;
+      &lt;text x={ax} y={ay-4} textAnchor="middle" fontSize="10"&gt;✈&lt;/text&gt;
+      &lt;circle cx={p1.x} cy={p1.y} r="5" fill="#1a237e"/&gt;&lt;circle cx={p1.x} cy={p1.y} r="2.5" fill="#fff"/&gt;
+      &lt;text x={p1.x} y={p1.y+12} textAnchor="middle" fontSize="7" fontWeight="bold" fill="#1a237e"&gt;{from.iata}&lt;/text&gt;
+      &lt;circle cx={p2.x} cy={p2.y} r="5" fill="#c62828"/&gt;&lt;circle cx={p2.x} cy={p2.y} r="2.5" fill="#fff"/&gt;
+      &lt;text x={p2.x} y={p2.y+12} textAnchor="middle" fontSize="7" fontWeight="bold" fill="#c62828"&gt;{to.iata}&lt;/text&gt;
+      &lt;rect x={Math.min(Math.max(p2.x-28,2),220)} y={p2.y+15} width="56" height="13" rx="3" fill="#c62828" opacity="0.85"/&gt;
+      &lt;text x={Math.min(Math.max(p2.x,30),248)} y={p2.y+24} textAnchor="middle" fontSize="7" fill="#fff" fontWeight="bold"&gt;{to.city}&lt;/text&gt;
+    &lt;/svg&gt;
+  );
+}
+&nbsp;
+export default function RouteCard({ route }) {
+  const airline=AIRLINES.find((a)=&gt;a.id===route.airline);
+  return (
+    &lt;div className="route-card"&gt;
+      &lt;div className="route-card__map"&gt;&lt;RouteMapSVG from={route.from} to={route.to}/&gt;&lt;/div&gt;
+      &lt;div className="route-card__info"&gt;
+        &lt;div className="route-card__name"&gt;{route.to.name.length&gt;32?<span class="branch-0 cbranch-no" title="branch not covered" >route.to.name.slice(0,32)+"…":r</span>oute.to.name}&lt;/div&gt;
+        &lt;div className="route-card__city"&gt;{route.to.city}&lt;/div&gt;
+        &lt;div className="route-card__pills"&gt;
+          &lt;span className="pill"&gt;{route.from.iata}&lt;/span&gt;
+          &lt;span className="pill-arrow"&gt;→&lt;/span&gt;
+          &lt;span className="pill red"&gt;{route.to.iata}&lt;/span&gt;
+          &lt;span className="pill"&gt;{route.distance}&lt;/span&gt;
+          &lt;span className="pill"&gt;{route.duration}&lt;/span&gt;
+        &lt;/div&gt;
+        {airline &amp;&amp; &lt;div className="route-card__airline"&gt;{airline.name}&lt;/div&gt;}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -211,7 +211,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-04-17T01:29:15.802Z
+                at 2026-04-21T01:59:31.095Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

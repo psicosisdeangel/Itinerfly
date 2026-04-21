@@ -1,5 +1,12 @@
+// ============================================================
+// src/services/api.js
+// Capa de comunicación con el backend Express.
+// Todos los componentes usan este archivo — nunca fetch directo.
+// ============================================================
+
 const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4000/api";
 
+// ── Helper central de fetch ──────────────────────────────────
 async function apiFetch(ruta, opciones = {}) {
   const token = localStorage.getItem("jfk_token");
   const headers = {
@@ -20,6 +27,7 @@ async function apiFetch(ruta, opciones = {}) {
   }
 }
 
+// ── Query string builder ─────────────────────────────────────
 function buildQuery(params) {
   const entries = Object.entries(params).filter(
     ([, v]) => v !== undefined && v !== null && v !== "" && v !== "all"
@@ -28,6 +36,7 @@ function buildQuery(params) {
   return "?" + entries.map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
 }
 
+// ── Vuelos ───────────────────────────────────────────────────
 export async function getDepartures(params = {}) {
   return apiFetch(`/flights/departures${buildQuery(params)}`);
 }
@@ -52,13 +61,14 @@ export async function getRoutes() {
   return apiFetch("/airlines/routes");
 }
 
+// ── Auth ─────────────────────────────────────────────────────
 export async function login(username, password) {
   const datos = await apiFetch("/auth/login", {
     method: "POST",
     body: JSON.stringify({ username, password }),
   });
   localStorage.setItem("jfk_token", datos.token);
-  localStorage.setItem("jfk_user",  JSON.stringify(datos.user));
+  localStorage.setItem("jfk_user", JSON.stringify(datos.user));
   return datos;
 }
 

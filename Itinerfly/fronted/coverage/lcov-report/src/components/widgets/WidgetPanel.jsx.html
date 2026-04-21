@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/23</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/23</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
@@ -86,52 +86,52 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import React, { useState } from "react";</span></span></span>
-<span class="cstat-no" title="statement not covered" >import { AIRLINES, ROUTES } from "../../data/mockData";</span>
-<span class="cstat-no" title="statement not covered" >import AirlineCard from "./AirlineCard";</span>
-<span class="cstat-no" title="statement not covered" >import RouteCard from "./RouteCard";</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export default function WidgetPanel() {</span>
-<span class="cstat-no" title="statement not covered" >  const [tab, setTab] = useState("routes");</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from "react";
+import { AIRLINES, ROUTES } from "../../data/mockData";
+import AirlineCard from "./AirlineCard";
+import RouteCard from "./RouteCard";
+&nbsp;
+export default function <span class="fstat-no" title="function not covered" >WidgetPanel() {</span>
+  const [tab, <span class="cstat-no" title="statement not covered" >setTab] = useState("routes");</span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="widget-tabs"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        {[["routes","🧭","Rutas aéreas"],["airlines","✈️","Aerolíneas"]].map(([id,icon,label])=&gt;(</span>
-<span class="cstat-no" title="statement not covered" >          &lt;button key={id} onClick={()=&gt;setTab(id)} className={`widget-tab${tab===id?" active":""}`}&gt;{icon} {label}&lt;/button&gt;</span>
-<span class="cstat-no" title="statement not covered" >        ))}</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;p className="widget-desc"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        {tab==="routes" ? "Rutas aéreas disponibles desde el Aeropuerto Internacional John F. Kennedy (JFK)." : "Aerolíneas que operan en el Aeropuerto Internacional John F. Kennedy (JFK)."}</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/p&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="widget-grid"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        {tab==="routes" ? ROUTES.map((r)=&gt;&lt;RouteCard key={r.id} route={r}/&gt;) : AIRLINES.map((a)=&gt;&lt;AirlineCard key={a.id} airline={a}/&gt;)}</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >  );</span>
-<span class="cstat-no" title="statement not covered" >}</span>
+    &lt;div&gt;
+      &lt;div className="widget-tabs"&gt;
+        {[["routes","🧭","Rutas aéreas"],["airlines","✈️","Aerolíneas"]].<span class="fstat-no" title="function not covered" >map(([</span>id,icon,label])=&gt;(
+<span class="cstat-no" title="statement not covered" >          &lt;button key={id} <span class="fstat-no" title="function not covered" >onClick={()=&gt;<span class="cstat-no" title="statement not covered" >s</span>etTab(id)}</span> className={`widget-tab${tab===id?" active":""}`}&gt;{icon} {label}&lt;/button&gt;</span>
+        ))}
+      &lt;/div&gt;
+      &lt;p className="widget-desc"&gt;
+        {tab==="routes" ? "Rutas aéreas disponibles desde el Aeropuerto Internacional John F. Kennedy (JFK)." : "Aerolíneas que operan en el Aeropuerto Internacional John F. Kennedy (JFK)."}
+      &lt;/p&gt;
+      &lt;div className="widget-grid"&gt;
+        {tab==="routes" ? ROUTES.<span class="fstat-no" title="function not covered" >map((r</span>)=&gt;<span class="cstat-no" title="statement not covered" >&lt;RouteCard key={r.id} route={r}/&gt;) </span>: AIRLINES.<span class="fstat-no" title="function not covered" >map((a</span>)=&gt;<span class="cstat-no" title="statement not covered" >&lt;AirlineCard key={a.id} airline={a}/&gt;)}</span>
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -139,7 +139,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-04-17T01:29:15.742Z
+                at 2026-04-21T01:59:31.037Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

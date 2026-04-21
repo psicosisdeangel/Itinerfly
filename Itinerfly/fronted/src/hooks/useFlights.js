@@ -1,3 +1,9 @@
+// ============================================================
+// src/hooks/useFlights.js
+// Hook que maneja carga de vuelos desde el backend.
+// Devuelve: { flights, loading, error, recargar }
+// ============================================================
+
 import { useState, useEffect, useCallback } from "react";
 import { getDepartures, getArrivals } from "../services/api";
 
@@ -12,6 +18,7 @@ export function useFlights(mode = "departures", filtros = {}) {
     try {
       const fn    = mode === "departures" ? getDepartures : getArrivals;
       const datos = await fn(filtros);
+      // El backend devuelve { flights: [...], count: N, mode: "..." }
       setFlights(datos.flights || []);
     } catch (err) {
       setError(err.message);
@@ -19,11 +26,10 @@ export function useFlights(mode = "departures", filtros = {}) {
     } finally {
       setLoading(false);
     }
+  // Serializar filtros para detectar cambios correctamente
   }, [mode, JSON.stringify(filtros)]);
 
-  useEffect(() => {
-    cargar();
-  }, [cargar]);
+  useEffect(() => { cargar(); }, [cargar]);
 
   return { flights, loading, error, recargar: cargar };
 }
